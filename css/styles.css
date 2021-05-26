@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* NavBar */
+
+.topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /*line-height: 50px;*/
+    font-family: Barlow, Helvetica, Arial, sans-serif; 
+    
+}
+
+.topnav_left a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border-right: 1px solid black; /* cizgiler */
+    margin-top: 10px; /* line length'i kaldırdığım için hizalamak amacıyla koydum */
+}
+
+.topnav_right a {    
+    float: right;        
+}
+
+.sign_in__item {   
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 40px;
+
+}
+
+.sign_up__item {
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 40px;    
+              
+}
+
+
+.book_library {
+    float: right;
+    text-align: center;
+    margin-right: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    font-size: 12px;
+}
+
+.pages__home__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 200px;
+    background-color: #F0F1F4;
+    color: #333333;
+    font-family: Barlow, Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 40px 15px 250px;
+    background-image: url(//dg0lpj0xiisq5.cloudfront.net/assets/v1/pages/home/hero_background-9f6cbcb….jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.pages__home__hero__title {
+    color: #111;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 43px;
+    max-width: 600px;
+    margin: 0px;
+}
+
+.pages__home__hero__byline {
+    color: #4e4e4e;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+.pages__home__hero__search-box-container {
+    max-width: 750px;
+    width: 100%;
+    height: 91px;
+    margin-top: 15px;
+}
+
+#home-search-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+}
+
+#home-search-box .home-search-box__icon {
+    height: 26px;
+    width: 26px;    
+}
+
+#home-search-box .home-search-box__input {    
+    height: 100%;
+    width: 100%;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: Barlow, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-left: 30px;
+}
+
+.input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}

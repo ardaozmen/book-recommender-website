@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+
+.topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /* line height silindi */
+    font-family: Barlow, Helvetica, Arial, sans-serif; 
+    
+}
+.topnav_left a {
+    margin-top: 10px; /* line length'i kaldırdığım için hizalamak amacıyla koydum */
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    border-right: 1px solid black; /* cizgiler */
+}
+.topnav_right a {    
+    float: right;       
+}
+.sign_in__item {   
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 4px;
+    margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 40px; /* buttonları dikdörtgenleştiren kod */ 
+}
+
+/* üsttekini kopyalayıp alta yapıştırdım */
+
+.sign_up__item {    
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 4px;
+    margin: 12px 12px 12px 0px;
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    max-height: 40px; 
+           
+}
+
+.book_library {
+    float: right;
+    text-align: center;
+    margin-right: 12px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    font-size: 12px;
+}
+
+/* navbar */
+
+
+/* Style the body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgb(220, 220, 220);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+/* Set a style for all buttons */
+button {
+    background-color: royalblue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* burdan sonrası tamamen profile.php ve ordaki menüdeki linklerle alakalı */
+/* dikkat içinde select tagi için stil var */
+
+.profilepic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    float: left;
+    margin: 110px 30px 0px 120px;
+}
+
+.info {
+    margin: 100px 100px 0px;
+    padding: 10px;
+    background-color: rgba(65, 105, 225, 0.281);
+    min-height: 350px;
+}
+
+.name {
+    font-size: 30px;
+    color: white;
+}
+
+.personalinfo {
+    font-size: 20px;
+    color: white;
+}
+
+.bio {
+    margin: 0px 30px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+    min-height: 150px;
+}
+
+.profilemenu {
+    text-align: center;
+    background-color: royalblue;
+    margin: 0px 100px;
+}
+
+.horizontal {
+    margin-top: 0px;
+}
+
+.horizontal li {
+    display: inline;
+    
+}
+
+.horizontal a {
+    color: white;
+    
+}
+
+.row {
+    display: inline;
+    
+  }
+
+.bookpic{
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px 30px 0px;
+}
+
+.booklist{
+    display: inline-block;
+    margin-bottom: 70px;
+}
+
+.booklist h2 {
+    margin: 5px 50px;
+}
+
+
+.friendpic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px; /* dont change this */
+    float: left;
+}
+
+.friendname {
+    padding: 15px; /* dont change this */
+}
+
+.messengerpic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px; /* dont change this */
+    float: left;
+}
+
+.messengername {
+    padding: 15px; /* dont change this */
+}
+
+.message {
+
+    padding-bottom: 15px; /* dont change this */
+
+}
+
+.notification {
+    margin: 10px 0px 40px;
+    padding-top: 5px;
+}
+
+.bell {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 0px 0px; /* dont change this */
+    float: left;
+}
+
+.nameform{
+    text-align: center;
+    font-size: 30px;
+    margin: 120px auto 0px;
+    color: white;
+    border: 1px solid black;
+    width: 80%;
+}
+
+
+.nameform input[type=text], input[type=password], input[type=number] {
+    width: 50%;
+    padding: 12px 20px;
+    margin-left: 20px;
+    margin-bottom: 8px; /*there is another 8px margin affects everything but the age form*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+select{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.profileheader{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.submitbutton {
+    text-align: center;
+    margin: 50px auto;
+    color: white;
+    width: 80%;
+}
+
+.submitbutton button {
+    width: 100%; /* dont change */
+}
