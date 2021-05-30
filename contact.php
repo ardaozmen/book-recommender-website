@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,11 +56,13 @@
     </div>
 
     <div class="topnav_right">
-      <a class="sign_up__item" href="sign_up.php">Sign Up</a>
-      <a class="sign_in__item" href="sign_in.php">Sign In</a>
-      <!--
-      <a class="book_library" href="#library">My Library</a>
-    -->
+    <?php if(isset($_SESSION['username'])){
+                echo '<a class="sign_up__item" href="profile.php">Profile</a>';
+                echo '<a class="sign_up__item" href="logout_action.php">Logout</a>';
+            } else{    
+                echo '<a class="sign_up__item" href="sign_up.php">Sign Up</a>';
+                echo '<a class="sign_in__item" href="sign_in.php">Sign In</a>';
+            }?>
   </div>
 
 </div>
