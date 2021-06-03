@@ -2,6 +2,9 @@
 session_start();
 $username = $_SESSION['username'];
 $conn = mysqli_connect("localhost", "group4", "group4", "group4");
+$query = "SELECT `book_name` FROM `fav_books` WHERE `username`='".$username."'";
+$result = mysqli_query($conn, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -37,27 +40,16 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
 
     <h1> Fav books </h1>
     <div class="row">
-        <div class="booklist">
-            <img class="bookpic" src= "image/book.png"/>
-            <h2> Book name </h2>
-        </div>
-        <div class="booklist">
-            <img class="bookpic" src= "image/book.png"/>
-            <h2> Book name </h2>
-        </div>
-        <div class="booklist">
-            <img class="bookpic" src= "image/book.png"/>
-            <h2> Book name </h2>
-        </div>
-        <div class="booklist">
-            <img class="bookpic" src= "image/book.png"/>
-            <h2> Book name </h2>
-        </div>
-        <div class="booklist">
-            <img class="bookpic" src= "image/book.png"/>
-            <h2> Book name </h2>
-        </div>
 
+    <?php 
+    while($row = mysqli_fetch_array($result)){
+        echo '<div class="booklist">
+        <div align="center"> <img class="bookpic" src= "image/book.png"/> </div> <div align="center">
+        <h6> '.$row['book_name'].' </h6></div>
+        </div>';
+    }
+    
+    ?>
 
     </div>
 

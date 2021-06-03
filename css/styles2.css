@@ -32,7 +32,7 @@
     box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     max-height: 40px; /* buttonları dikdörtgenleştiren kod */ 
 }
@@ -47,7 +47,7 @@
     box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     max-height: 40px; 
            
@@ -102,10 +102,7 @@ ul {
     list-style-type: none;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
+
 
 
 /* burdan sonrası tamamen profile.php ve ordaki menüdeki linklerle alakalı */
@@ -130,6 +127,8 @@ a {
     font-size: 30px;
     color: white;
 }
+
+
 
 .personalinfo {
     font-size: 20px;
