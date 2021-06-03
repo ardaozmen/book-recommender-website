@@ -19,13 +19,18 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             function search_fun(){
-                var values = $("#seacrhForm").serialize();
+                document.getElementById("search_button").disabled = true;
+                $("#prog").show();
+                var values = $("#searchForm").serialize();
                 $.ajax({
                     url : "search.php",
                     type : "POST",
                     data : values ,
                     success: function(response){
                         $("#res").html(response);
+                        $("#prog").hide();
+                        document.getElementById("search_button").disabled = false;
+
                     },
                     error : function(jqXHR, textstatus, errorthrown){
                     
@@ -70,17 +75,25 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
         </h2>
 
         <form name="searchForm" id="searchForm" action="search.php" method="POST">
-        <div class="pages__home__hero__search-box-container">
-            <div id="home-search-box">
-                <div class="home-search-box__icon"></div>
-                <input class="home-search-box__input" placeholder="Search a Book...">
-                <i class="fa fa-search" style="font-size: 30px;color: grey; margin-right: 30px;"></i></div>
-                <input class="sign_in__item" type="button" name="search_button" id="search_button" value="Search" onclick="search_fun()">
-            
-                <br>
-                <div id="res"></div>
-
+        <div class="pages__home__hero__search-box-container" width="500">
+            <div id="home-search-box" width="500">
+                
+                <input class="home-search-box__input" placeholder="Search a Book..." width="500" name="book_search" id="book_search">
+                <select name="no_books" id="no_books">
+                    <option value="5" selected>5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                 </select>
             </div>
+                 <br>
+            <input class="sign_in__item" type="button" name="search_button" id="search_button" value="Search" onclick="search_fun()">
+                <br>
+
+            <div id="prog">Please wait...</div>
+            <script>$("#prog").hide();</script>
+            <div id="res"></div>
         </div>
         </form>
     </div>

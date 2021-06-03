@@ -4,7 +4,7 @@ $username = $_SESSION['username'];
 $conn = mysqli_connect("localhost", "group4", "group4", "group4");
 $query = "SELECT * FROM profile WHERE username='".$username."'";
 $result = mysqli_query($conn, $query);
-$row = mysqli_fetch_array($result)
+$row = mysqli_fetch_array($result);
 
 ?>
 
@@ -16,6 +16,27 @@ $row = mysqli_fetch_array($result)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles2.css">
     <title>Profile</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function search_fun(){
+                document.getElementById("search_button").disabled = true;
+                $("#prog").show();
+                var values = $("#relatedBooks").serialize();
+                $.ajax({
+                    url : "search.php",
+                    type : "POST",
+                    data : values ,
+                    success: function(response){
+                        $("#res").html(response);
+                        $("#prog").hide();
+                    },
+                    error : function(jqXHR, textstatus, errorthrown){
+                    
+                    }
+                });
+            }
+            
+        </script>
 
 </head>
 <body>
@@ -58,5 +79,33 @@ $row = mysqli_fetch_array($result)
         <li><a href="editprofile.php"> edit profile </a></li>
     </ul>
     </div>
+
+    <div align="center">
+            <?php 
+                $query = "SELECT `book_name` FROM `fav_books` WHERE `username`='".$username."'";
+                $result = mysqli_query($conn, $query);
+                $rows = mysqli_fetch_all($result);
+                $num_books = $result->num_rows;
+                $rand = rand(0,$num_books-1);
+                if($rows){
+                $rand_book = $rows[$rand][0];
+                
+                echo '<form name=relatedBooks" id="relatedBooks" type="POST" action="search.php">
+                <input type="hidden" name="book_search" id="book_search" value="'.$rand_book.'"/>
+                <input type="hidden" name="no_books" id="no_books" value="5"/>
+                <input class="sign_in__item" type="button" name="search_button" id="search_button" value="Since you have * '.$rand_book.' * you want to see similar books?" onclick="search_fun()">
+                <br>
+                
+                </form>
+                '; 
+                }
+            ?>
+            <div id="prog">Please wait...</div>
+            <script>$("#prog").hide();</script>
+            <div id="res"></div>
+
+    </div>
+
+
 </body>
 </html>
