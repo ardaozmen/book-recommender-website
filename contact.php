@@ -1,9 +1,13 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact</title>
+  <title>Booklet</title>
 </head>
-<body style="background-color:white;">
+
   <link href="css/styles.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -44,20 +48,27 @@
 </head>
 <body>
   <div class="topnav">
-    <div class="topnav_left">
-      <a class="active" href="home.php">Home</a>
-      <a href="books.php">Books</a>
-      <a href="contact.php">Contact</a>
-      <a href="aboutus.php">About</a>
-    </div>
+        <div class="topnav_left">
+            <img class="logo" src="img/booklet.png" alt="booklet">
+            <a class="active" href="home.php">Home</a>
+            <a href="books.php">Books</a>
+            <a href="contact.php">Contact</a>
+            <a href="aboutus.php">About</a>
+        </div>
 
-    <div class="topnav_right">
-      <a class="sign_up__item" href="sign_up.php">Sign Up</a>
-      <a class="sign_in__item" href="sign_in.php">Sign In</a>
-      <!--
-      <a class="book_library" href="#library">My Library</a>
-    -->
-  </div>
+        <div class="topnav_right">
+            
+            <?php if(isset($_SESSION['username'])){
+                echo '<a class="book_library" href="#library">My Book Library</a>';
+                echo '<a class="sign_up__item" href="profile.php">Profile</a>';
+                echo '<a class="sign_up__item" href="logout_action.php">Logout</a>';
+            } else{
+                echo '<a class="sign_up__item" href="sign_up.php">Sign Up</a>';
+                echo '<a class="sign_in__item" href="sign_in.php">Sign In</a>';
+            }?>
+                 
+        </div>
+    </div>
 
 </div>
 <h3>Contact Form</h3>

@@ -27,7 +27,7 @@
 .sign_in__item {   
     background-color:royalblue;
     color: #ffffff;
-    border-radius: 4px;
+    border-radius: 16px;
     margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
     box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
     padding: 14px 16px;
