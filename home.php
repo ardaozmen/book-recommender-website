@@ -63,16 +63,16 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
 
     <div class="main">
         <div class="pages__home__hero">
-          <h1 class="pages__home__hero__title">Discover books you'll love!</h1>
+          <h1 class="pages__home__hero__title">Discover new literature!</h1>
           <h2 class="pages__home__hero__byline">
-            Enter a book you like and the site will analyse our huge database of real readers' favorite books to provide book recommendations and suggestions for what to read next.
+          Type in your favorite book's name and let us recommend similar books to you'll love. You can add your favorite suggestions to your favorite list and show your own book culture on your page! Your next journey starts here!
         </h2>
         <form name="searchForm" id="searchForm" action="search.php" method="POST">
         <div class="pages__home__hero__search-box-container">
             <div id="home-search-box">
                 <div class="home-search-box__icon"></div>
                 <i class="fa fa-search" style="font-size: 30px;color: grey; margin-right: 30px;"></i>
-                <input class="home-search-box__input" placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod">
+                <input class="home-search-box__input" placeholder="Search a book you love and see our recommendations. Let's try it!...">
 
                 </div>
                 <input class="search_button" type="button" name="search_button" id="search_button" value="What's Next?" onclick="search_fun()">

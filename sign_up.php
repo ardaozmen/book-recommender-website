@@ -26,7 +26,55 @@
             }
             
         </script>
-        
+        <style>
+    Body {
+	font-family: Arial;
+
+	}
+
+	button {
+		border-radius: 16px;
+        padding: 14px 205px;
+        margin: 12px 12px 12px 0px;
+        font-weight: 600;
+	}
+
+	form {
+		border: 3px solid #f1f1f1;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		/* bring your own prefixes */
+		transform: translate(-50%, -50%);
+        border-radius: 64px;
+        width: 500px;
+        height: 450px;
+	}
+
+	input[type=text], input[type=password] {   
+		width: 100%;   
+		margin: 10px 10px 10px 0;  
+		padding: 10px 10px;   
+		display: inline-block;   
+		border: 1px solid grey;   
+		box-sizing: border-box;
+        outline: none;
+           
+	}
+
+	button:hover {   
+		opacity: 0.7;   
+	}   
+
+	
+	.container {
+        width: 500px;
+        height: 350px;
+		padding: 25px;   
+		background-color: white;
+        border-radius: 64px;  
+	}
+        </style>
     </head>
     
     <body>
@@ -52,22 +100,23 @@
                  
         </div>
     </div>
-    <div class="main">
-        <div class="pages__home__hero">
-          <form name="signupForm" id="signupForm" action="signup_action" method="POST">
-          <h1 class="pages__home__hero__title">Name and Surname</h1>
-            <div id="home-search-box">
-                <input class="home-search-box__input" type="text" name="name_surname" maxlength="40" style="font-size: 20px;color: grey; margin-right: 30px;"></div>
-          <h1 class="pages__home__hero__title">Username</h1>
-            <div id="home-search-box">
-                <input class="home-search-box__input" type="text" name="username" maxlength="40" style="font-size:  20px;color: grey; margin-right: 30px;"></div>
-          <h1 class="pages__home__hero__title">Password</h1>
-            <div id="home-search-box">
-                <input class="home-search-box__input" type="password" name="password" maxlength="40" style="font-size: 20px;color: grey; margin-right: 30px;"></div>
-                <input class="sign_in__item" type="button" name="signup_button" id="signup_button" value="SIGN UP" onclick="signup_fun()">
-                <div id='res'></div>
-          </form>  
-        </div>
-    </div>
+    <form name="signinForm" id="signinForm" action="signin_action.php" method="POST">  
+		<div class="container">   
+        <img src="img/booklet.png" alt="logo" width="140" height="75" style="display: block; margin-left: auto; margin-right: auto; ">
+            <label>Name Surname : </label>   
+			<input type="text" placeholder="Enter Full Name" name="fullname" required> 
+            <label>Username : </label>   
+			<input type="text" placeholder="Enter Username" name="username" required>  
+			<label>Password : </label>   
+			<input type="password" placeholder="Enter Password" name="password" required>  
+			<button type="submit">Login</button>   
+			<input type="checkbox" checked="checked"> Remember me   
+			  
+			Forgot <a href="#"> password? </a>   
+		</div>
+        <div><div id='res'></div></div>   
+	</form>
+
+    
     </body>
 </html>
