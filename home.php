@@ -56,7 +56,7 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
                 </a>
                 <div class="dropdown-content" id="myDropdown">
                   <a href="profile.php">Profile</a>
-                  <a href="#">My Book Library</a>
+                  <a href="favbooks.php">My Book Library</a>
                   <a href="logout_action.php">Logout</a>
                 </div>
               </div>';
