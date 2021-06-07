@@ -31,26 +31,31 @@
                  
         </div>
     </div>
-    <h1 style="margin-left: 100px; margin-right: 100px;">About Us</h1>
-    <p style="margin-left: 100px; margin-right: 100px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor e et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p style="margin-left: 100px; margin-right: 100px;">This website has been created by group 4. Our group members are Bora Tosyalı, Arda Cem Özmen, Muhaned Al Hayek, Ulaş Can Çiçekli, Yüksel Köç.
+     The recommendation algorithm has been written and developed by Muhaned Al Hayek.</p>
+     <p style="margin-left: 100px; margin-right: 100px;">In this project, we aimed to create a useful website that will expand user's book library, help them acquire new taste,
+discover books unheard of and start a new journey, right here. The recommending algorithm that the website features
+has been carefully crafted and is still being developed to help the user find the next perfect book that they will never
+forget. You can immidietly add similar books to your favorites and can look something for your taste at your profile page
+at any time with the click of a button.</p>
 
 
     <div class="container_" style="margin-left: 100px; margin-right: 100px;">
         <div class="class1">
             <form>
                 <ul class="namelist">
-                    <li>Bora</li>
-                    <li>Arda</li>
-                    <li>Can</li>
-                    <li>Mohanned</li>
-                    <li>Yuksel</li>
+                    <li>Bora Tosyalı</li>
+                    <li>Arda Cem Özmen</li>
+                    <li>Muhaned Al Hayek</li>
+                    <li>Ulaş Can Çiçekli</li>
+                    <li>Yüksel Köç</li>
                 </ul>
-                <ul>
-                    <li>email</li>
-                    <li>email</li>
-                    <li>email</li>
-                    <li>email</li>
-                    <li>email</li>
+                <ul class="emails">
+                    <li>bora.tosyali@bilgiedu.net</li>
+                    <li>cem.ozmen@bilgiedu.net</li>
+                    <li>muhanad.al.hayek@bilgiedu.net</li>
+                    <li>can.cicekli@bilgiedu.net</li>
+                    <li>yuksel.koc@bilgiedu.net</li>
                 </ul>
             </form>
         </div>

@@ -362,3 +362,20 @@ body {
     width: 100%; /* dont change */
 }
 
+
+.namelist {
+    float: left;
+    padding-top: 10px;
+}
+.emails {
+    float: right;   
+    padding-top: 10px;
+}
+.container_ {
+    float: left;
+}
+
+.class1 {
+    border-top: 1px solid black;
+    margin-top: 10px;
+}

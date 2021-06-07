@@ -15,7 +15,23 @@ $row = mysqli_fetch_array($result)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Booklet</title>
+<style>
+    .submit_item {
 
+    margin-bottom: 10px;
+    }
+
+    .submit_item input {
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    font-size: 14px;
+    font-weight: 400;
+    max-height: 40px; 
+    padding: 10px;
+}
+</style>
 
 </head>
     <body>

@@ -37,6 +37,7 @@
         padding: 14px 205px;
         margin: 12px 12px 12px 0px;
         font-weight: 600;
+        
 	}
 
 	form {
@@ -109,7 +110,7 @@
 			<input type="text" placeholder="Enter Username" name="username" required>  
 			<label>Password : </label>   
 			<input type="password" placeholder="Enter Password" name="password" required>  
-			<button type="submit">Login</button>   
+			<button type="submit">Sign Up</button>   
 			<input type="checkbox" checked="checked"> Remember me   
 			  
 			Forgot <a href="#"> password? </a>   
