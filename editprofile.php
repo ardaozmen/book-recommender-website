@@ -13,25 +13,136 @@ $row = mysqli_fetch_array($result)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesB.css">
     <title>Booklet</title>
-<style>
-    .submit_item {
+    <style>
+       /* NavBar */
 
-    margin-bottom: 10px;
-    }
+.topnav {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /*line-height: 50px;*/
+    font-family: Barlow, Helvetica, Arial, sans-serif; 
+    
+}
 
-    .submit_item input {
+.topnav_left a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 1px solid black; /* cizgiler */
+    margin-top: 20px; /* line length'i kaldırdığım için hizalamak amacıyla koydum */
+    margin-bottom: 15px;
+}
+
+.topnav_right a {    
+    float: right;        
+}
+
+.logo {
+    float: left;
+    display: block;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 95px;
+    height: 50px;
+    margin-bottom: 15px;
+    
+     
+
+}
+
+.sign_in__item {   
     background-color:royalblue;
     color: #ffffff;
-    border-radius: 4px;
+    border-radius: 16px;
     box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
+    text-decoration: none;
     font-size: 14px;
     font-weight: 400;
-    max-height: 40px; 
-    padding: 10px;
+    max-height: 40px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
 }
-</style>
+
+.sign_up__item {
+    background-color:royalblue;
+    color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0px 2px 5px 1px rgb(68, 110, 255);
+    padding: 14px 16px;
+    margin: 12px 12px 12px 0px; /* top ve bottom marjin eklendi */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    max-height: 40px;   
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-right: 30px; 
+              
+}
+/* Dropdown */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    float: right;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border-left: 1px solid black; /* cizgiler */
+    margin-top: 20px; /* line length'i kaldırdığım için hizalamak amacıyla koydum */
+    margin-bottom: 15px;
+    margin-right: 30px;
+  }
+  
+ 
+  
+  /* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+  /* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: transparent;
+}
+  
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+    </style>
 
 </head>
     <body>
@@ -99,8 +210,7 @@ $row = mysqli_fetch_array($result)
               
 
                 <p class="pages__home__hero__title">Bio</p>
-                        <input class="home-search-box__input" type="text" value= "<?php echo $row['bio'] ?>" name="bio"  style="font-size:  15px;color: grey; margin-right: 30px;">
-
+                    <textarea name="bio" cols="30" rows="10" class="home-search-box__input_bio"><?php echo $row['bio'] ?></textarea>
                 </div>
 
                 <input class="sign_in__item" type="submit" name="submit_button" id="submit_button" value="Submit">

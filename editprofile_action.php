@@ -13,7 +13,7 @@
 
     $query = "UPDATE profile SET name_surname='".$name_surname."', age='".$age."', gender='".$gender."',country='".$country."',city='".$city."', bio='".$bio."' WHERE username='".$username."'";
 
-    echo '<script>window.location = "../site./profile.php"</script>';
+    echo '<script>window.location = "../book_recommender_website/profile.php"</script>';
     header('www.google.com');
 
     $result = mysqli_query($conn, $query);

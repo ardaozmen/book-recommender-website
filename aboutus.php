@@ -47,13 +47,15 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
                  
         </div>
     </div>
-    <p style="margin-left: 100px; margin-right: 100px;">This website has been created by group 4. Our group members are Bora Tosyalı, Arda Cem Özmen, Muhaned Al Hayek, Ulaş Can Çiçekli, Yüksel Köç.
-     The recommendation algorithm has been written and developed by Muhaned Al Hayek.</p>
+    
      <p style="margin-left: 100px; margin-right: 100px;">In this project, we aimed to create a useful website that will expand user's book library, help them acquire new taste,
 discover books unheard of and start a new journey, right here. The recommending algorithm that the website features
 has been carefully crafted and is still being developed to help the user find the next perfect book that they will never
 forget. You can immidietly add similar books to your favorites and can look something for your taste at your profile page
 at any time with the click of a button.</p>
+
+<p style="margin-left: 100px; margin-right: 100px;">This website has been created by group 4. Our group members are Bora Tosyalı, Arda Cem Özmen, Muhaned Al Hayek, Ulaş Can Çiçekli, Yüksel Köç.
+     The recommendation algorithm has been written and developed by Muhaned Al Hayek.</p>
 
 
     <div class="container_" style="margin-left: 100px; margin-right: 100px;">
