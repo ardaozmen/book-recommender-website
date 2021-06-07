@@ -15,7 +15,7 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
 
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             function search_fun(){
@@ -49,10 +49,17 @@ $conn = mysqli_connect("localhost", "group4", "group4", "group4");
 
         <div class="topnav_right">
             
-            <?php if(isset($_SESSION['username'])){
-                echo '<a class="book_library" href="#library">My Book Library</a>';
-                echo '<a class="sign_up__item" href="profile.php">Profile</a>';
-                echo '<a class="sign_up__item" href="logout_action.php">Logout</a>';
+        <?php if(isset($_SESSION['username'])){
+                echo '<div class="dropdown">
+                <a class="dropbtn">Settings
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content" id="myDropdown">
+                  <a href="profile.php">Profile</a>
+                  <a href="#">My Book Library</a>
+                  <a href="logout_action.php">Logout</a>
+                </div>
+              </div>';
             } else{
                 echo '<a class="sign_up__item" href="sign_up.php">Sign Up</a>';
                 echo '<a class="sign_in__item" href="sign_in.php">Sign In</a>';

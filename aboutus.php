@@ -1,3 +1,10 @@
+<?php 
+// connect to database
+session_start();
+$conn = mysqli_connect("localhost", "group4", "group4", "group4");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <title>Booklet | About Us</title>
 
 </head>
@@ -19,11 +28,18 @@
         </div>
 
         <div class="topnav_right">
-            
+        
             <?php if(isset($_SESSION['username'])){
-                echo '<a class="book_library" href="#library">My Book Library</a>';
-                echo '<a class="sign_up__item" href="profile.php">Profile</a>';
-                echo '<a class="sign_up__item" href="logout_action.php">Logout</a>';
+                echo '<div class="dropdown">
+                <a class="dropbtn">Settings
+                  <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content" id="myDropdown">
+                  <a href="profile.php">Profile</a>
+                  <a href="#">My Book Library</a>
+                  <a href="logout_action.php">Logout</a>
+                </div>
+              </div>';
             } else{
                 echo '<a class="sign_up__item" href="sign_up.php">Sign Up</a>';
                 echo '<a class="sign_in__item" href="sign_in.php">Sign In</a>';
@@ -60,5 +76,8 @@ at any time with the click of a button.</p>
             </form>
         </div>
     </div>
+    <script>
+
+</script>
 </body>
 </html>
